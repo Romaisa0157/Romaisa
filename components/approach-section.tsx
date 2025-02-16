@@ -45,9 +45,9 @@ export function ApproachSection() {
           className="mb-24"
         >
           <h2 className="max-w-4xl text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
-            I'M <span className="text-[rgb(250,78,38)]">ROMAISA</span> BASED IN ISLAMABAD, PAKISTAN.
+          Bridging<span className="text-[rgb(250,78,38)]"> Tech, Creativity, </span> and<span className="text-[rgb(250,78,38)]"> Storytelling</span> - One Project at a Time
           </h2>
-          <p className="mt-6 text-right text-sm text-gray-400">
+          <p className="mt-6 text-right text-sm text-gray-400 md:text-base md:text-left">
             I employed responsive design skills to maintain consistency across all devices.
           </p>
         </motion.div>

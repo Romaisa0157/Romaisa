@@ -75,7 +75,7 @@ export const ContactSection = forwardRef<HTMLElement>((props, ref) => {
             >
               <FaLinkedin className="text-xl text-[rgb(250,78,38)]" />
               <Link
-                href="https://www.linkedin.com/in/your-linkedin-profile"
+                href="https://www.linkedin.com/in/romaisa-425ba8227"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-[rgb(250,78,38)] transition-colors duration-300"
@@ -92,13 +92,7 @@ export const ContactSection = forwardRef<HTMLElement>((props, ref) => {
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
             className="mt-12"
           >
-             {/* <Button
-              size="lg"
-              variant="ghost"
-              className="rounded-full border-2 border-white px-8 text-lg font-light tracking-wider text-white transition-colors hover:bg-white hover:text-black"
-            >
-              CONTACT ME
-            </Button> */}
+             
           </motion.div>
         </div>
       </div>

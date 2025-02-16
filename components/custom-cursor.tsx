@@ -6,6 +6,7 @@ import { motion } from "framer-motion"
 export function CustomCursor() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [isPointer, setIsPointer] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
     const updateMousePosition = (e: MouseEvent) => {
@@ -18,9 +19,22 @@ export function CustomCursor() {
       )
     }
 
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768) // Adjust the breakpoint as needed
+    }
+
     window.addEventListener("mousemove", updateMousePosition)
-    return () => window.removeEventListener("mousemove", updateMousePosition)
+    window.addEventListener("resize", handleResize)
+    handleResize() // Check initial size
+
+    return () => {
+      window.removeEventListener("mousemove", updateMousePosition)
+      window.removeEventListener("resize", handleResize)
+    }
   }, [])
+
+  // Don't render the cursor on mobile
+  if (isMobile) return null;
 
   return (
     <>

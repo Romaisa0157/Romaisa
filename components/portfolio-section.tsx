@@ -68,26 +68,28 @@ export function PortfolioSection() {
 
       {/* Header */}
       <div className="container mx-auto mb-32 max-w-[90%]">
-        <div className="flex items-start justify-between">
-          <motion.h2
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-5xl font-bold leading-tight tracking-tight text-white sm:text-6xl lg:text-7xl"
-          >
-            <span className="text-[rgb(250,78,38)]">LATEST</span>
-            <br />
-            PORTFOLIO
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="max-w-[200px] text-right text-sm text-gray-400"
-          >
-            My creative spirit comes alive in the digital realm. With nimble fingers flying across the device.
-          </motion.p>
-        </div>
+      <div className="flex flex-col space-y-6 md:flex-row md:items-start md:justify-between md:space-y-0">
+        <motion.h2
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl lg:text-7xl"
+        >
+          <span className="text-[rgb(250,78,38)]">LATEST</span>
+          <br />
+          PORTFOLIO
+        </motion.h2>
+        
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-sm text-gray-400 md:max-w-[200px] md:text-base"
+        >
+          My creative spirit comes alive in the digital realm. With nimble fingers flying across the device.
+        </motion.p>
+      </div>
+    
       </div>
 
       {/* Portfolio Grid */}
@@ -121,7 +123,7 @@ export function PortfolioSection() {
                 </div>
                 {/* Overlay on hover */}
                 <motion.div 
-                  className="absolute inset-0 bg-[rgb(250,78,38)] bg-opacity-0 transition-all duration-300 group-hover:bg-opacity-20"
+                  className="absolute inset-0 bg-opacity-0 transition-all duration-300 group-hover:bg-opacity-20"
                 />
               </motion.div>
 

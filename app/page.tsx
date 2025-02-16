@@ -7,7 +7,7 @@ import { PortfolioSection } from "@/components/portfolio-section"
 import { ContactSection } from "@/components/contact-section"
 import { Footer } from "@/components/footer"
 import { useRef } from "react"
-
+import { ServicesSection } from "@/components/services-section"
 export default function Home() {
   const contactRef = useRef<HTMLElement>(null)
 
