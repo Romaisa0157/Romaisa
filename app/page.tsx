@@ -1,5 +1,5 @@
 'use client'
-
+import { Analytics } from "@vercel/analytics/react"
 import { HeroSection } from "@/components/hero-section"
 import { ApproachSection } from "@/components/approach-section"
 import { ExperienceSection } from "@/components/experience-section"
