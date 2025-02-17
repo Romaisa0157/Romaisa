@@ -11,7 +11,7 @@ export function HeroSection() {
   const [time, setTime] = useState("")
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
   // Create an array of spring references
-  const springRefs = useRef([...Array(7)].map(() => 
+  const springRefs = useRef([...Array(7)].map(() =>
     useSpring(1, { stiffness: 300, damping: 30 })
   )).current
 
@@ -48,13 +48,10 @@ export function HeroSection() {
   }
 
   return (
-    <section className="relative flex min-h-screen flex-col bg-black px-4 sm:px-6 lg:px-8">
-      {/* Background elements with lower z-index */}
-      <div className="absolute inset-0 z-0">
-        {/* <SplineBackground /> */}
+    <section className="relative flex min-h-screen flex-col  px-4 sm:px-6 lg:px-8">
+ 
         <InteractiveGrid />
-      </div>
-
+     
       {/* Content with higher z-index */}
       <div className="relative z-10 flex flex-1 flex-col">
         <Navbar />
@@ -75,7 +72,7 @@ export function HeroSection() {
           <h1 className="flex text-[clamp(4rem,20vw,20rem)] font-bold leading-none tracking-tighter text-white">
             {"ROMAISA".split("").map((letter, i) => {
               const isHovered = hoveredIndex === i
-              
+
               return (
                 <motion.span
                   key={i}
@@ -128,11 +125,15 @@ export function HeroSection() {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="mt-8 px-6 py-3 rounded-full border border-white bg-transparent text-sm font-light tracking-wider text-white"
             onClick={() => {
-              window.open("/path-to-your-resume.pdf", "_blank")
+              const link = document.createElement("a");
+              link.href = "/Romaisa_s__CV.pdf";
+              link.download = "Romaisa_s__CV.pdf"; // Specify the file name for download
+              link.click();
             }}
           >
             RESUME
           </motion.button>
+
         </div>
 
         {/* Footer Info */}
